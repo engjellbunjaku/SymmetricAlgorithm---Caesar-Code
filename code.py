@@ -38,3 +38,27 @@ def decrypt(text, shift):
 
 
 
+
+
+
+print("Welcome. \nPress 1 to encrypt text\nPress 2 to decrpyt")
+choice = int(input("Your choice is : "))
+
+if choice == 1:
+    input_text = input("Your text: ")
+    random = int(input("Press 1 to encrypt with random key\nPress 2 to encrypt with specific key\nYour choice: "))
+    if random == 1 or random == 2:
+        if random == 1:
+            input_shift = randint(1, 26)
+        else:
+            input_shift = int(input("Shift: "))
+        encrypted_text = encrypt(input_text, input_shift)
+        print("Encrypted text with shift: " + str(input_shift) + " is :" + encrypted_text)
+
+    else:
+        print("WRONG INPUT")
+
+
+
+
+
