@@ -39,6 +39,26 @@ def decrypt(text, shift):
 
 
 
+def brute_force(encrypted_text):
+    for i in range(1, 26):
+        text = decrypt(encrypted_text, i)
+        print("Shift :" + str(i) + " " + text)
+        
+        elif choice == 2:
+    input_text = input("Your text: ")
+    method = int(input("Press 1 to decrpyt with specific key\nPress 2 to bruteforce\nChoose method :"))
+    if method == 1 or method == 2:
+        if method == 1:
+            specific_key = int(input("Key: "))
+            decrypted_text = decrypt(input_text, specific_key)
+            print("Decrypted text with shift: " + str(specific_key) + " is :" + decrypted_text)
+
+        else:
+            brute_force(input_text)
+    else:
+        print(
+
+
 
 
 print("Welcome. \nPress 1 to encrypt text\nPress 2 to decrpyt")
